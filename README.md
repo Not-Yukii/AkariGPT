@@ -1,5 +1,5 @@
 
-# perseval_s_application2
+# Akari
 ### Table of contents
 - [System requirements](#system-requirements)
 - [Figma design guidelines for better UI accuracy](#figma-design-guideline-for-better-accuracy)
