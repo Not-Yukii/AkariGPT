@@ -3,7 +3,7 @@ import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_bottom_bar.dart';
-import '../mondes_page/mondes_page.dart';
+import '../mondes_screen/mondes_screen.dart';
 import '../parties_perso_two_page/parties_perso_two_page.dart';
 
 // ignore_for_file: must_be_immutable

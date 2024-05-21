@@ -1,5 +1,7 @@
 // ignore_for_file: unused_import
 
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 
 import '../presentation/app_navigation_screen/app_navigation_screen.dart';
@@ -26,6 +28,7 @@ import '../presentation/partie_perso_three_screen/partie_perso_three_screen.dart
 import '../presentation/parties_persos_tab_container_screen/parties_persos_tab_container_screen.dart';
 import '../presentation/profil_screen/profil_screen.dart';
 import '../presentation/shop_screen/shop_screen.dart';
+import '../presentation/mondes_screen/mondes_screen.dart';
 
 class AppRoutes {
   static const String partiesPersosPage = '/parties_persos_page';
@@ -56,9 +59,11 @@ class AppRoutes {
   static const String profilScreen = '/profil_screen';
   static const String paramTresScreen = '/param_tres_screen';
   static const String appNavigationScreen = '/app_navigation_screen';
-  static const String initialRoute = '/initialRoute';
+  static const String mondesScreen = '/mondes_screen';
+  static const String initialRoute = '/initialRoute'; // connection screen
 
   static Map<String, WidgetBuilder> routes = {
+    mondesScreen: (context) => MondeScreen(),
     partiesPersosTabContainerScreen: (context) => PartiesPersosTabContainerScreen(),
     partiePersoThreeScreen: (context) => PartiePersoThreeScreen(),
     jeuBleuScreen: (context) => JeuBleuScreen(),

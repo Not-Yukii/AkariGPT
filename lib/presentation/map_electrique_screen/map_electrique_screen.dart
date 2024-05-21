@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
+import 'package:perseval_s_application2/presentation/mondes_screen/mondes_screen.dart';
 import '../../core/app_export.dart';
 import '../../widgets/app_bar/appbar_image.dart';
 import '../../widgets/app_bar/appbar_subtitle.dart';
 import '../../widgets/app_bar/appbar_subtitle_one.dart';
 import '../../widgets/app_bar/custom_app_bar.dart';
 import '../../widgets/custom_bottom_bar.dart';
-import '../mondes_page/mondes_page.dart';
 import '../parties_perso_two_page/parties_perso_two_page.dart';
 
 // ignore_for_file: must_be_immutable
@@ -285,7 +285,7 @@ class MapElectriqueScreen extends StatelessWidget {
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
       case AppRoutes.mondesPage:
-        return MondesPage();
+        return MondeScreen();
       case AppRoutes.partiesPersoTwoPage:
         return PartiesPersoTwoPage();
       default:

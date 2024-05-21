@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
+import 'package:perseval_s_application2/presentation/mondes_screen/mondes_screen.dart';
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/app_bar/appbar_image.dart';
@@ -10,7 +11,6 @@ import '../../widgets/custom_bottom_bar.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_radio_button.dart';
 import '../../widgets/custom_search_view.dart';
-import '../mondes_page/mondes_page.dart';
 import '../parties_perso_two_page/parties_perso_two_page.dart';
 import 'widgets/nestedview1_item_widget.dart';
 
@@ -616,7 +616,7 @@ class MultijoueurTwoScreen extends StatelessWidget {
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
       case AppRoutes.mondesPage:
-        return MondesPage();
+        return MondeScreen();
       case AppRoutes.partiesPersoTwoPage:
         return PartiesPersoTwoPage();
       default:

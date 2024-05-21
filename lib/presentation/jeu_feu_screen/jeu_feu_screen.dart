@@ -5,7 +5,7 @@ import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/custom_bottom_bar.dart';
 import '../../widgets/custom_outlined_button.dart';
-import '../mondes_page/mondes_page.dart';
+import '../mondes_screen/mondes_screen.dart';
 import '../parties_perso_two_page/parties_perso_two_page.dart';
 
 // ignore_for_file: must_be_immutable

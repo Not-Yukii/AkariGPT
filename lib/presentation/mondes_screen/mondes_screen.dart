@@ -1,13 +1,84 @@
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
 import '../../core/app_export.dart';
+import '../../widgets/custom_bottom_bar.dart';
 import 'widgets/userprofile_item_widget.dart'; // ignore_for_file: must_be_immutable
 
+class MondeScreen extends StatelessWidget {
+  MondeScreen({Key? key}) : super(key: key);
+
+  GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        extendBody: true,
+        extendBodyBehindAppBar: true,
+        body: Container(
+          width: SizeUtils.width,
+          height: SizeUtils.height,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment(0.5, 0),
+              end: Alignment(0.5, 1),
+              colors: [appTheme.gray900, appTheme.blueGray900],
+            ),
+          ),
+          child: Navigator(
+            key: navigatorKey,
+            initialRoute: AppRoutes.mondesPage,
+            onGenerateRoute: (routeSetting) => PageRouteBuilder(
+              pageBuilder: (ctx, ani, ani1) => getCurrentPage(routeSetting.name!),
+              transitionDuration: Duration(seconds: 0),
+            ),
+          ),
+        ),
+        bottomNavigationBar: _buildBottombar(context),
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildBottombar(BuildContext context) {
+    return CustomBottomBar(
+      onChanged: (BottomBarEnum type) {
+        Navigator.pushNamed(navigatorKey.currentContext!, getCurrentRoute(type, context));
+      },
+    );
+  }
+
+  /// Handling route based on bottom click actions
+  String getCurrentRoute(BottomBarEnum type, BuildContext context) {
+    switch (type) {
+      case BottomBarEnum.Carteico25x26:
+        return AppRoutes.mondesPage;
+      case BottomBarEnum.Settings:
+        return AppRoutes.paramTresScreen;
+      case BottomBarEnum.Shopico:
+        return AppRoutes.shopScreen;
+      case BottomBarEnum.Lock:
+        return AppRoutes.partiesPersoTwoPage;
+      default:
+        return "/";
+    }
+  }
+
+  /// Handling page based on route
+  Widget getCurrentPage(String currentRoute) {
+    switch (currentRoute) {
+      case AppRoutes.mondesPage:
+        return MondesPage();
+      case AppRoutes.partiesPersoTwoPage:
+        return PartiesPersoTwoPage();
+      default:
+        return DefaultWidget();
+    }
+  }
+}
+
 class MondesPage extends StatelessWidget {
-  const MondesPage({Key? key})
-      : super(
-          key: key,
-        );
+  const MondesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +125,7 @@ class MondesPage extends StatelessWidget {
             width: 36.adaptSize,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                  ImageConstant.imgAk,
-                ),
+                image: AssetImage(ImageConstant.imgAk),
                 fit: BoxFit.cover,
               ),
             ),
@@ -153,9 +222,7 @@ class MondesPage extends StatelessWidget {
                           width: 6.h,
                           decoration: BoxDecoration(
                             color: appTheme.amber600,
-                            borderRadius: BorderRadius.circular(
-                              3.h,
-                            ),
+                            borderRadius: BorderRadius.circular(3.h),
                           ),
                         ),
                       )
@@ -247,4 +314,20 @@ class MondesPage extends StatelessWidget {
   onTapSpeudo(BuildContext context) {}
   onTapImgBouttonone(BuildContext context) {}
   onTapUserprofile(BuildContext context) {}
+}
+
+class PartiesPersoTwoPage extends StatelessWidget {
+  const PartiesPersoTwoPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(); // Implementation de PartiesPersoTwoPage
+  }
+}
+
+class DefaultWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(); // DefaultWidget
+  }
 }
