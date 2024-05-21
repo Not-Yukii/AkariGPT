@@ -6,7 +6,7 @@ import '../../widgets/app_bar/appbar_subtitle_three.dart';
 import '../../widgets/app_bar/appbar_subtitle_two.dart';
 import '../../widgets/app_bar/custom_app_bar.dart';
 import '../../widgets/custom_bottom_bar.dart';
-import '../mondes_screen/mondes_screen.dart';
+import '../mondes_screen/mondes_screen.dart' as mondes;
 import '../parties_perso_two_page/parties_perso_two_page.dart';
 import '../parties_persos_page/parties_persos_page.dart';
 
@@ -314,7 +314,7 @@ class PartiesPersosTabContainerScreenState
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
       case AppRoutes.mondesPage:
-        return MondeScreen();
+        return mondes.MondeScreen();
       case AppRoutes.partiesPersoTwoPage:
         return PartiesPersoTwoPage();
       default:

@@ -4,7 +4,7 @@ import '../../core/app_export.dart';
 import '../../widgets/custom_bottom_bar.dart';
 import '../../widgets/custom_floating_button.dart';
 import '../../widgets/custom_radio_button.dart';
-import '../mondes_page/mondes_page.dart';
+import '../mondes_screen/mondes_screen.dart' as mondes;
 import '../parties_perso_two_page/parties_perso_two_page.dart';
 
 // ignore_for_file: must_be_immutable
@@ -657,7 +657,7 @@ String getCurrentRoute(BottomBarEnum type) {
 Widget getCurrentPage(String currentRoute) {
   switch (currentRoute) {
     case AppRoutes.mondesPage:
-      return MondesPage();
+      return mondes.MondesPage();
     case AppRoutes.partiesPersoTwoPage:
       return PartiesPersoTwoPage();
     default:

@@ -19,7 +19,6 @@ import '../presentation/map_electrique_screen/map_electrique_screen.dart';
 import '../presentation/map_feu_screen/map_feu_screen.dart';
 import '../presentation/map_plante_screen/map_plante_screen.dart';
 import '../presentation/map_roche_screen/map_roche_screen.dart';
-import '../presentation/mondes_container_screen/mondes_container_screen.dart';
 import '../presentation/multijoueur_tab_container_screen/multijoueur_tab_container_screen.dart';
 import '../presentation/multijoueur_two_screen/multijoueur_two_screen.dart';
 import '../presentation/parametres_screen/parametres_screen.dart';
@@ -72,7 +71,6 @@ class AppRoutes {
     jeuPlanteScreen: (context) => JeuPlantesScreen(),
     jeuFeuScreen: (context) => JeuFeuScreen(),
     partieMultijoueurFourScreen: (context) => PartieMultijoueurFourScreen(),
-    mondesContainerScreen: (context) => MondesContainerScreen(),
     multijoueurTabContainerScreen: (context) => MultijoueurTabContainerScreen(),
     multijoueurTwoScreen: (context) => MultijoueurTwoScreen(),
     arcadeScreen: (context) => ArcadeScreen(),

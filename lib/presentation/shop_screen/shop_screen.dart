@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_bottom_bar.dart';
-import '../mondes_screen/mondes_screen.dart';
+import '../mondes_screen/mondes_screen.dart' as mondes;
 import '../parties_perso_two_page/parties_perso_two_page.dart';
 import 'widgets/shop1_item_widget.dart';
 import 'widgets/shop_item_widget.dart'; 
@@ -336,7 +336,7 @@ class ShopScreen extends StatelessWidget {
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
       case AppRoutes.mondesPage:
-        return MondeScreen();
+        return mondes.MondeScreen();
       case AppRoutes.partiesPersoTwoPage:
         return PartiesPersoTwoPage();
       default:

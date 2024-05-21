@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-import 'package:perseval_s_application2/presentation/mondes_screen/mondes_screen.dart';
+import '../../presentation/mondes_screen/mondes_screen.dart' as mondes;
 import '../../core/app_export.dart';
 import '../../widgets/app_bar/appbar_image.dart';
 import '../../widgets/app_bar/appbar_subtitle_three.dart';
@@ -198,7 +198,7 @@ class MapPlanteScreen extends StatelessWidget {
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
       case AppRoutes.mondesPage:
-        return MondeScreen();
+        return mondes.MondeScreen();
       case AppRoutes.partiesPersoTwoPage:
         return PartiesPersoTwoPage();
       default:

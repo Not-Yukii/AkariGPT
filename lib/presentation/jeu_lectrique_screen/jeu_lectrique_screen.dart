@@ -11,7 +11,7 @@ import '../../widgets/custom_bottom_bar.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_outlined_button.dart';
 import '../../widgets/custom_text_form_field.dart';
-import '../mondes_screen/mondes_screen.dart';
+import '../mondes_screen/mondes_screen.dart' as mondes;
 import '../parties_perso_two_page/parties_perso_two_page.dart';
 
 // ignore_for_file: must_be_immutable
@@ -597,7 +597,7 @@ class JeulectriqueScreen extends StatelessWidget {
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
       case AppRoutes.mondesPage:
-        return MondesPage();
+        return mondes.MondesPage();
       case AppRoutes.partiesPersoTwoPage:
         return PartiesPersoTwoPage();
       default:

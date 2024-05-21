@@ -7,7 +7,7 @@ import '../../widgets/app_bar/appbar_subtitle_three.dart';
 import '../../widgets/app_bar/appbar_subtitle_two.dart';
 import '../../widgets/app_bar/custom_app_bar.dart';
 import '../../widgets/custom_bottom_bar.dart';
-import '../mondes_screen/mondes_screen.dart';
+import '../mondes_screen/mondes_screen.dart' as mondes;
 import '../parties_perso_two_page/parties_perso_two_page.dart';
 
 // ignore_for_file: must_be_immutable
@@ -427,7 +427,7 @@ class JeuBleuScreen extends StatelessWidget {
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
       case AppRoutes.mondesPage:
-        return MondesPage();
+        return mondes.MondesPage();
       case AppRoutes.partiesPersoTwoPage:
         return PartiesPersoTwoPage();
       default:
