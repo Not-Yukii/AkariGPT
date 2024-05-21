@@ -19,7 +19,7 @@ import '../screens/map_electrique_screen/map_electrique_screen.dart';
 import '../screens/map_feu_screen/map_feu_screen.dart';
 import '../screens/map_plante_screen/map_plante_screen.dart';
 import '../screens/map_roche_screen/map_roche_screen.dart';
-import '../screens/multijoueur_tab_container_screen/multijoueur_tab_container_screen.dart';
+import '../screens/multijoueur_screen/multijoueur_screen.dart';
 import '../screens/multijoueur_two_screen/multijoueur_two_screen.dart';
 import '../screens/parametres_screen/parametres_screen.dart';
 import '../screens/partie_multijoueur_four_screen/partie_multijoueur_four_screen.dart';
@@ -59,6 +59,7 @@ class AppRoutes {
   static const String paramTresScreen = '/param_tres_screen';
   static const String appNavigationScreen = '/app_navigation_screen';
   static const String mondesScreen = '/mondes_screen';
+  static const String multijoueurScreen = '/multijoueur_screen';
   static const String initialRoute = '/initialRoute'; // connection screen
 
   static Map<String, WidgetBuilder> routes = {
@@ -71,7 +72,7 @@ class AppRoutes {
     jeuPlanteScreen: (context) => JeuPlantesScreen(),
     jeuFeuScreen: (context) => JeuFeuScreen(),
     partieMultijoueurFourScreen: (context) => PartieMultijoueurFourScreen(),
-    multijoueurTabContainerScreen: (context) => MultijoueurTabContainerScreen(),
+    multijoueurScreen: (context) => MultijoueurScreen(),
     multijoueurTwoScreen: (context) => MultijoueurTwoScreen(),
     arcadeScreen: (context) => ArcadeScreen(),
     shopScreen: (context) => ShopScreen(),

@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_bottom_bar.dart';
+import '../parties_perso_two_page/parties_perso_two_page.dart';
 import 'widgets/userprofile_item_widget.dart'; // ignore_for_file: must_be_immutable
 
 class MondeScreen extends StatelessWidget {
   MondeScreen({Key? key}) : super(key: key);
 
-  GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+  final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +29,12 @@ class MondeScreen extends StatelessWidget {
           child: Navigator(
             key: navigatorKey,
             initialRoute: AppRoutes.mondesPage,
-            onGenerateRoute: (routeSetting) => PageRouteBuilder(
-              pageBuilder: (ctx, ani, ani1) => getCurrentPage(routeSetting.name!),
-              transitionDuration: Duration(seconds: 0),
-            ),
+            onGenerateRoute: (routeSetting) {
+              return PageRouteBuilder(
+                pageBuilder: (ctx, ani, ani1) => getCurrentPage(routeSetting.name!),
+                transitionDuration: Duration(seconds: 0),
+              );
+            },
           ),
         ),
         bottomNavigationBar: _buildBottombar(context),
@@ -39,17 +42,16 @@ class MondeScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   Widget _buildBottombar(BuildContext context) {
     return CustomBottomBar(
       onChanged: (BottomBarEnum type) {
-        Navigator.pushNamed(navigatorKey.currentContext!, getCurrentRoute(type, context));
+        String route = getCurrentRoute(type);
+        Navigator.pushNamed(navigatorKey.currentContext!, route);
       },
     );
   }
 
-  /// Handling route based on bottom click actions
-  String getCurrentRoute(BottomBarEnum type, BuildContext context) {
+  String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Carteico25x26:
         return AppRoutes.mondesPage;
@@ -64,7 +66,6 @@ class MondeScreen extends StatelessWidget {
     }
   }
 
-  /// Handling page based on route
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
       case AppRoutes.mondesPage:
@@ -113,7 +114,6 @@ class MondesPage extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   Widget _buildHead(BuildContext context) {
     return Container(
       decoration: AppDecoration.outlineBlack,
@@ -245,7 +245,6 @@ class MondesPage extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   Widget _buildColumnmodeavent(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 2.h),
@@ -306,7 +305,6 @@ class MondesPage extends StatelessWidget {
     );
   }
 
-  /// Navigates to the shopScreen when the action is triggered.
   onTapMonaiebulbies(BuildContext context) {
     Navigator.pushNamed(context, AppRoutes.shopScreen);
   }
@@ -314,20 +312,4 @@ class MondesPage extends StatelessWidget {
   onTapSpeudo(BuildContext context) {}
   onTapImgBouttonone(BuildContext context) {}
   onTapUserprofile(BuildContext context) {}
-}
-
-class PartiesPersoTwoPage extends StatelessWidget {
-  const PartiesPersoTwoPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(); // Implementation de PartiesPersoTwoPage
-  }
-}
-
-class DefaultWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(); // DefaultWidget
-  }
 }
