@@ -174,7 +174,7 @@ class ConnexionScreen extends StatelessWidget {
 
   /// Navigates to the mondesContainerScreen when the action is triggered.
   void onTapConfirmer(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.mondesScreen);
+    Navigator.pushNamed(context, AppRoutes.jeuFeuScreen);
   }
 
   /// Navigates to the inscriptionScreen when the action is triggered.
