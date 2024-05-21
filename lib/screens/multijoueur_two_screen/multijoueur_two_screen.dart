@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-import '../../presentation/mondes_screen/mondes_screen.dart' as mondes;
+import '../../screens/mondes_screen/mondes_screen.dart' as mondes;
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/app_bar/appbar_image.dart';

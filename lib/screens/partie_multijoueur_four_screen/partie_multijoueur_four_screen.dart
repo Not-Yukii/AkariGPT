@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-import '../../presentation/mondes_screen/mondes_screen.dart' as mondes;
+import '../../screens/mondes_screen/mondes_screen.dart' as mondes;
 import '../../core/app_export.dart';
 import '../../widgets/custom_bottom_bar.dart';
 import '../../widgets/custom_floating_button.dart';

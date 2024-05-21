@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
 import 'package:outline_gradient_button/outline_gradient_button.dart';
-import '../../presentation/mondes_screen/mondes_screen.dart' as mondes;
+import '../../screens/mondes_screen/mondes_screen.dart' as mondes;
 import '../../core/app_export.dart';
 import '../../widgets/app_bar/appbar_image.dart';
 import '../../widgets/app_bar/appbar_subtitle_three.dart';
