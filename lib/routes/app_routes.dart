@@ -11,7 +11,7 @@ import '../screens/connexion_screen/connexion_screen.dart';
 import '../screens/inscription_screen/inscription_screen.dart';
 import '../screens/jeu_bleu_screen/jeu_bleu_screen.dart';
 import '../screens/jeu_feu_screen/jeu_feu_screen.dart';
-import '../screens/jeu_lectrique_screen/jeu_lectrique_screen.dart';
+import '../screens/jeu_electrique_screen/jeu_electrique_screen.dart';
 import '../screens/jeu_plante_screen/jeu_plante_screen.dart';
 import '../screens/jeu_roche_screen/jeu_roche_screen.dart';
 import '../screens/map_eau_screen/map_eau_screen.dart';
